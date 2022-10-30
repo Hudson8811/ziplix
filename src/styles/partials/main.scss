@@ -1,0 +1,101 @@
+body {
+	font-family: $mainFont;
+	font-size: 16px;
+	color: $textMainColor;
+	background-color: $white;
+}
+
+main {
+	overflow: hidden;
+}
+
+a {
+	color: $textMainColor;
+	text-decoration: none;
+}
+
+nav,
+ol,
+ul {
+	list-style: none;
+}
+
+.container {
+	max-width: 1263px;
+	width: 100%;
+	padding: 0 15px;
+	margin: 0 auto;
+	box-sizing: border-box;
+
+	@include max(lg) {
+		padding: 0 48px;
+	}
+
+	@include max(md) {
+		padding: 0 24px;
+	}
+
+	&--big {
+		max-width: 1327px;
+	}
+}
+
+.body-scroll-lock {
+	overflow: hidden;
+}
+
+.d-none-mobile {
+	@include max(lg) {
+		display: none;
+	}
+}
+
+.d-none-desktop {
+	display: none;
+
+	@include max(lg) {
+		display: block;
+	}
+}
+
+/* Swiper override */
+.swiper-pagi {
+	font-size: 16px;
+	color: $white;
+}
+
+.swiper-pagination-current {
+	font-size: 32px;
+}
+
+.swiper-prev,
+.swiper-next {
+	width: 64px;
+	height: 64px;
+	background-color: $white;
+	border: 1px solid rgba($gray-a6, 0.7);
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+
+	@include max(md) {
+		width: 48px;
+		height: 48px;
+	}
+
+	@include hover {
+		background-color: rgba($white, 0.9);
+	}
+}
+
+.swiper-prev {
+	margin-right: 8px;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='8' viewBox='0 0 16 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15 4H1M1 4L4 1M1 4L4 7' stroke='%230E0E0E' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+}
+
+.swiper-next {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='8' viewBox='0 0 16 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 4H15M15 4L12 1M15 4L12 7' stroke='%230E0E0E' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+}

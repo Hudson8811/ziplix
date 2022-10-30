@@ -1,0 +1,5 @@
+mixin card(href, className, title, image, bg, gradient)
+	a.card(href=href, target='_blank', class=className, style='background: ' + gradient)&attributes(attributes)
+		figure
+			.card__bg(style='background-image: ' + image + '; background-color: ' + bg)
+			.card__title!= title

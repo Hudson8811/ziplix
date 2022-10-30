@@ -1,0 +1,50 @@
+.advantages {
+	padding: 87px 0 92px;
+
+	@include max(lg) {
+		padding: 70px 0 88px;
+	}
+
+	@include max(md) {
+		padding: 43px 0 53px;
+	}
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 20px;
+
+		@include max(lg) {
+			justify-content: center;
+			gap: 43px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 306px;
+
+		@include max(lg) {
+			width: 50%;
+		}
+
+		@include max(md) {
+			width: 100%;
+		}
+
+		span {
+			font-weight: 700;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			text-align: center;
+			margin-top: 43px;
+
+			@include max(md) {
+				margin-top: 40px;
+			}
+		}
+	}
+}

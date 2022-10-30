@@ -1,0 +1,317 @@
+section.conversations
+	include ../partials/filter.pug
+	.conversations__title.d-flex.d-lg-none.flex-wrap.align-items-center.gap-1
+		.conversations__back.d-flex.align-items-center.justify-content-center
+			+icon('arrow-back')
+		span.user SMS User MZH11
+		span.date 05/10/2022 - 13:04
+	.conversations__nav.d-flex.d-lg-none
+		.conversations__nav-item.active(data-tab='1') Chat window
+		.conversations__nav-item(data-tab='2') Lead form
+		.conversations__nav-item(data-tab='3') Info
+	.conversations__block.d-flex.flex-wrap
+		.conversations__col
+			.conversations__title.p-3.p-lg-4.px-0.px-lg-3.pb-3 Conversations
+			.conversations__tabs
+				.conversations__tabs-item.d-flex.align-items-center.p-2.px-3
+					.conversations__tabs-item-icon.align-self-start
+						+icon('messages')(width='16', height='16')
+					.conversations__tabs-item-name
+						p Visitor
+						p 05/10/2022 - 13:04
+					.conversations__notify-num.d-flex.align-items-center.justify-content-center.ms-auto 2
+				.conversations__tabs-item.active.d-flex.align-items-center.p-2.px-3
+					.conversations__tabs-item-icon.align-self-start
+						+icon('sms')(width='16', height='17')
+					.conversations__tabs-item-name
+						p SMS User
+						p 05/10/2022 - 13:04
+					.conversations__notify-num.d-flex.align-items-center.justify-content-center.ms-auto 1
+				.conversations__tabs-item.d-flex.align-items-center.p-2.px-3
+					.conversations__tabs-item-icon.align-self-start
+						+icon('wa')(width='18', height='18')
+					.conversations__tabs-item-name
+						p 4470541265787
+						p 05/10/2022 - 13:04
+				.conversations__tabs-item.d-flex.align-items-center.p-2.px-3
+					.conversations__tabs-item-icon.align-self-start
+						+icon('fb-mess')(width='19', height='18')
+					.conversations__tabs-item-name
+						p Henry
+						p 05/10/2022 - 13:04
+				.conversations__tabs-item.d-flex.align-items-center.p-2.px-3
+					.conversations__tabs-item-icon.align-self-start
+						+icon('messages')(width='16', height='16')
+					.conversations__tabs-item-name
+						p Visitor
+						p 05/10/2022 - 13:04
+				.conversations__tabs-item.d-flex.align-items-center.p-2.px-3
+					.conversations__tabs-item-icon.align-self-start
+						+icon('messages')(width='16', height='16')
+					.conversations__tabs-item-name
+						p Visitor
+						p 05/10/2022 - 13:04
+		.conversations__col.p-lg-4(data-tab-content='1')
+			.conversations__title.d-none.d-lg-flex.flex-wrap.align-items-center.gap-1
+				span.user SMS User MZH11
+				span.date 05/10/2022 - 13:04
+				+button('Close Chat', 'd-none d-lg-flex ms-auto button--red button--outline button--small conversations__close-btn', '')
+			.conversations__chat
+				.conversations__dialog.conversations__dialog--self.ms-auto
+					.conversations__dialog-content.p-2 Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna,
+						|  vitae commodo lectus mauris et velit. Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					.conversations__dialog-info
+						span.author Walter
+						span.date 13:09
+				.conversations__dialog.conversations__dialog--companion
+					.conversations__dialog-content.p-2 Cras pulvinar, sapien id vehicula aliquet
+					.conversations__dialog-info
+						span.author SMS User MZH11
+						span.date 13:09
+				.conversations__dialog.conversations__dialog--companion
+					.conversations__dialog-content.p-2 Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					.conversations__dialog-info
+						span.author SMS User MZH11
+						span.date 13:09
+				.conversations__dialog.conversations__dialog--self.ms-auto
+					.conversations__dialog-content.p-2 Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna,
+						|  vitae commodo lectus mauris et velit. Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					.conversations__dialog-info
+						span.author Walter
+						span.date 13:09
+				.conversations__dialog.conversations__dialog--companion
+					.conversations__dialog-content.p-2 Cras pulvinar, sapien id vehicula aliquet
+					.conversations__dialog-info
+						span.author SMS User MZH11
+						span.date 13:09
+				.conversations__dialog.conversations__dialog--companion
+					.conversations__dialog-content.p-2 Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					.conversations__dialog-info
+						span.author SMS User MZH11
+						span.date 13:09
+				.conversations__dialog.conversations__dialog--self.ms-auto
+					.conversations__dialog-content.p-2 Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna,
+						|  vitae commodo lectus mauris et velit. Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					.conversations__dialog-info
+						span.author Walter
+						span.date 13:09
+				.conversations__dialog.conversations__dialog--companion
+					.conversations__dialog-content.p-2 Cras pulvinar, sapien id vehicula aliquet
+					.conversations__dialog-info
+						span.author SMS User MZH11
+						span.date 13:09
+				.conversations__dialog.conversations__dialog--companion
+					.conversations__dialog-content.p-2 Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					.conversations__dialog-info
+						span.author SMS User MZH11
+						span.date 13:09
+			.conversations__bottom-nav.d-flex.flex-wrap.align-items-center.justify-content-between.d-lg-none
+				+button('Predefined scripts', 'button--blue button--outline button--small conversations__scripts-btn js-modal-scripts', '#modalScripts', 'journal-check', '16', '17')
+				+button('Close Chat', 'button--red button--outline button--small conversations__close-btn', '')
+			.conversations__send
+				+field('textarea', '', 'message', 'Write your message here', 'conversations__send')
+				a.conversations__send-btn(href='#')
+					+icon('send')(width='21', height='18')
+			+button('Resume Conversation', 'd-none button--red button--outline conversations__resume-btn', '')
+			+button('+ Join this Conversation', 'd-none button--blue button--outline conversations__resume-btn', '')
+		.conversations__col
+			.conversations__customer-info.p-lg-4.pt-4(data-tab-content='3')
+				.conversations__title Customer Info
+				.conversations__customer-info-wrapper
+					.conversations__customer-info-item.d-flex
+						p Customer Name
+						p SMS User MZH11
+					.conversations__customer-info-item.d-flex
+						p Customer ID
+						p 08125486321458652
+					.conversations__customer-info-item.d-flex
+						p Source
+						p SMS +447429312920
+					.conversations__customer-info-item.d-flex
+						p Region
+						p London
+			.conversations__generation.p-lg-3.px-lg-4(data-tab-content='2')
+				.conversations__title Lead Generation
+				+field('text', 'First Name', 'first_name', '', 'field--column conversations__generation-field')
+				+field('text', 'Last Name', 'last_name', '', 'field--column conversations__generation-field')
+				+field('tel', 'Phone Number', 'phone', '', 'field--column conversations__generation-field')
+				+field('text', 'Email', 'email', '', 'field--column conversations__generation-field')
+				+field('text', 'Postcode', 'postcode', '', 'field--column conversations__generation-field')
+				+field('select', 'Select Deal Category', 'deal_category', 'Select', 'field--column conversations__generation-field conversations__generation-field--select')
+				+field('select', 'Stock Type', 'stock_type', 'Select', 'field--column conversations__generation-field')
+		.conversations__col.p-4.d-none.d-lg-block
+			.conversations__title Predefined Scripts
+			.conversations__search.d-flex.flex-wrap.gap-2
+				+field('search', '','search', 'Search', 'field--column conversations__search-field')
+				+button('', 'button--red button--outline conversations__search-btn', '', 'search', '16', '16')
+			.conversations__accordion
+				.conversations__accordion-item.active
+					.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+						p Greeting
+						+icon('chevron')(width='14', height='8')
+					.conversations__accordion-item-content(style='display: block')
+						p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+						p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+						p Cras pulvinar, sapien id vehicula aliquet
+						p Morbi varius quam ac venenatis tempus.
+				.conversations__accordion-item
+					.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+						p Conversational
+						+icon('chevron')(width='14', height='8')
+					.conversations__accordion-item-content
+						p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+						p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+						p Cras pulvinar, sapien id vehicula aliquet
+						p Morbi varius quam ac venenatis tempus.
+				.conversations__accordion-item
+					.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+						p Closing
+						+icon('chevron')(width='14', height='8')
+					.conversations__accordion-item-content
+						p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+						p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+						p Cras pulvinar, sapien id vehicula aliquet
+						p Morbi varius quam ac venenatis tempus.
+				.conversations__accordion-item
+					.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+						p Transfer
+						+icon('chevron')(width='14', height='8')
+					.conversations__accordion-item-content
+						p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+						p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+						p Cras pulvinar, sapien id vehicula aliquet
+						p Morbi varius quam ac venenatis tempus.
+				.conversations__accordion-item
+					.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+						p Abuse
+						+icon('chevron')(width='14', height='8')
+					.conversations__accordion-item-content
+						p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+						p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+						p Cras pulvinar, sapien id vehicula aliquet
+						p Morbi varius quam ac venenatis tempus.
+				.conversations__accordion-item
+					.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+						p Privacy
+						+icon('chevron')(width='14', height='8')
+					.conversations__accordion-item-content
+						p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+						p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+						p Cras pulvinar, sapien id vehicula aliquet
+						p Morbi varius quam ac venenatis tempus.
+				.conversations__accordion-item
+					.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+						p Transfer
+						+icon('chevron')(width='14', height='8')
+					.conversations__accordion-item-content
+						p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+						p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+						p Cras pulvinar, sapien id vehicula aliquet
+						p Morbi varius quam ac venenatis tempus.
+				.conversations__accordion-item
+					.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+						p Abuse
+						+icon('chevron')(width='14', height='8')
+					.conversations__accordion-item-content
+						p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+						p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+						p Cras pulvinar, sapien id vehicula aliquet
+						p Morbi varius quam ac venenatis tempus.
+				.conversations__accordion-item
+					.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+						p Privacy
+						+icon('chevron')(width='14', height='8')
+					.conversations__accordion-item-content
+						p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+						p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+						p Cras pulvinar, sapien id vehicula aliquet
+						p Morbi varius quam ac venenatis tempus.
+
+block modals
+	#modalScripts.conversations__col.p-3(style='display: none')
+		.conversations__title Predefined Scripts
+		.conversations__search.d-flex.flex-wrap.gap-2
+			+field('search', '','search', 'Search', 'field--column conversations__search-field')
+			+button('', 'button--red button--outline conversations__search-btn', '', 'search', '16', '16')
+		.conversations__accordion
+			.conversations__accordion-item.active
+				.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+					p Greeting
+					+icon('chevron')(width='14', height='8')
+				.conversations__accordion-item-content(style='display: block')
+					p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+					p Cras pulvinar, sapien id vehicula aliquet
+					p Morbi varius quam ac venenatis tempus.
+			.conversations__accordion-item
+				.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+					p Conversational
+					+icon('chevron')(width='14', height='8')
+				.conversations__accordion-item-content
+					p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+					p Cras pulvinar, sapien id vehicula aliquet
+					p Morbi varius quam ac venenatis tempus.
+			.conversations__accordion-item
+				.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+					p Closing
+					+icon('chevron')(width='14', height='8')
+				.conversations__accordion-item-content
+					p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+					p Cras pulvinar, sapien id vehicula aliquet
+					p Morbi varius quam ac venenatis tempus.
+			.conversations__accordion-item
+				.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+					p Transfer
+					+icon('chevron')(width='14', height='8')
+				.conversations__accordion-item-content
+					p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+					p Cras pulvinar, sapien id vehicula aliquet
+					p Morbi varius quam ac venenatis tempus.
+			.conversations__accordion-item
+				.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+					p Abuse
+					+icon('chevron')(width='14', height='8')
+				.conversations__accordion-item-content
+					p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+					p Cras pulvinar, sapien id vehicula aliquet
+					p Morbi varius quam ac venenatis tempus.
+			.conversations__accordion-item
+				.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+					p Privacy
+					+icon('chevron')(width='14', height='8')
+				.conversations__accordion-item-content
+					p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+					p Cras pulvinar, sapien id vehicula aliquet
+					p Morbi varius quam ac venenatis tempus.
+			.conversations__accordion-item
+				.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+					p Transfer
+					+icon('chevron')(width='14', height='8')
+				.conversations__accordion-item-content
+					p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+					p Cras pulvinar, sapien id vehicula aliquet
+					p Morbi varius quam ac venenatis tempus.
+			.conversations__accordion-item
+				.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+					p Abuse
+					+icon('chevron')(width='14', height='8')
+				.conversations__accordion-item-content
+					p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+					p Cras pulvinar, sapien id vehicula aliquet
+					p Morbi varius quam ac venenatis tempus.
+			.conversations__accordion-item
+				.conversations__accordion-item-toggle.d-flex.align-items-center.justify-content-between
+					p Privacy
+					+icon('chevron')(width='14', height='8')
+				.conversations__accordion-item-content
+					p Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+					p Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+					p Cras pulvinar, sapien id vehicula aliquet
+					p Morbi varius quam ac venenatis tempus.

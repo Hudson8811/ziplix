@@ -1,0 +1,74 @@
+.products {
+	padding: 96px 0 92px;
+
+	@include max(lg) {
+		padding: 79px 0 73px;
+	}
+
+	@include max(md) {
+		padding: 40px 0;
+	}
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 24px;
+
+		@include max(md) {
+			gap: 20px;
+		}
+	}
+
+	&__card {
+		width: calc(33% - 12px);
+
+		@include max(lg) {
+			width: calc(50% - 12px);
+		}
+
+		@include max(990) {
+			width: 100%;
+		}
+
+		&--first {
+			.card {
+				&__title {
+					height: 100%;
+					color: $white;
+					padding: 60px 20px 60px 74px;
+					text-align: left;
+					text-transform: uppercase;
+					letter-spacing: 0.06em;
+
+					@include max(lg) {
+						max-width: 370px;
+						padding: 77px 20px 20px 80px;
+						font-size: 28px;
+					}
+
+					@include max(md) {
+						padding: 31px 15px 15px 31px;
+						font-size: 24px;
+					}
+
+					span {
+						display: block;
+						font-size: 32px;
+						color: $black-0e;
+						margin-bottom: 12px;
+
+						@include max(lg) {
+							font-size: 28px;
+							margin-bottom: 6px;
+						}
+
+						@include max(md) {
+							font-size: 24px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

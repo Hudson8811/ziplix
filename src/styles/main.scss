@@ -1,0 +1,28 @@
+/* base */
+@import "base/var";
+@import "base/reset";
+@import "base/fonts";
+
+/* mixin */
+@import "base/mixin";
+
+/* main */
+@import "partials/main";
+
+/* libs */
+@import "libs/swiper-bundle.min.css";
+@import "libs/aos.css";
+
+/* components */
+@import "partials/header";
+@import "partials/footer";
+
+/* blocks */
+@import "blocks/card";
+@import "blocks/first-screen";
+@import "blocks/advantages";
+@import "blocks/catalog";
+@import "blocks/about";
+@import "blocks/products";
+
+

@@ -1,0 +1,46 @@
+.footer {
+	background: linear-gradient(259.04deg, #010209 12.6%, #2F3440 100%);
+	padding: 41px 0;
+
+	@include max(md) {
+		padding: 25px 0;
+	}
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 15px;
+
+		@include max(lg) {
+			flex-direction: column;
+			justify-content: center;
+			gap: 33px;
+		}
+
+		@include max(md) {
+			gap: 20px;
+		}
+	}
+
+	&__copyrights {
+		font-weight: 700;
+		color: rgba($white, 0.5);
+
+		@include max(md) {
+			text-align: center;
+		}
+	}
+
+	&__email {
+		font-weight: 700;
+		color: $white;
+		text-decoration: underline;
+		transition: color 0.3s ease;
+
+		@include hover {
+			color: rgba($white, 0.8);
+		}
+	}
+}

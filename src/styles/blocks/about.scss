@@ -1,0 +1,37 @@
+.about {
+	padding: 96px 0 92px;
+	background: linear-gradient(258.6deg, #010209 -19.98%, #2F3440 100%);
+
+	@include max(lg) {
+		padding: 71px 0 71px;
+	}
+
+	@include max(md) {
+		padding: 41px 0 48px;
+	}
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 24px;
+	}
+
+	&__card {
+		width: calc(33% - 12px);
+
+		@include max(lg) {
+			width: calc(50% - 12px);
+		}
+
+		@include max(990) {
+			width: 100%;
+		}
+
+		&--narrow {
+			.card__bg {
+				background-size: 75%;
+			}
+		}
+	}
+}
