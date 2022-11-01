@@ -3,6 +3,12 @@ header.header
 		nav.header__nav
 			ul.header__nav-inner
 				li
+					ul.header__lang
+						li
+							a.active(href='#') En
+						li
+							a(href='#') Ko
+				li
 					a(href='#', target='_blank') Бренд
 				li
 					a(href='#', target='_blank') Линейки масел
@@ -16,7 +22,13 @@ header.header
 					a(href='#', target='_blank') Карьера
 	.container.header__container.d-none-desktop
 		.header__nav
-			div
+			ul.header__nav-inner
+				li
+					ul.header__lang
+						li
+							a.active(href='#') En
+						li
+							a(href='#') Ko
 			a(href='/')
 				+icon('logo')
 			.header__burger

@@ -69,12 +69,12 @@
 			}
 		}
 
-		li {
+		> ul > li {
 			+ li {
 				margin-left: 56px;
 			}
 
-			a {
+			> a {
 				display: inline;
 				font-weight: 700;
 				background: linear-gradient(currentColor,currentColor) no-repeat 0 100%;
@@ -176,6 +176,39 @@
 
 		@include hover {
 			color: rgba($white, 0.8);
+		}
+	}
+
+	&__lang {
+		display: flex;
+		align-items: center;
+
+		li {
+			+ li {
+				margin-left: 10px;
+			}
+
+			a {
+				font-size: 16px;
+				font-weight: 700;
+				color: $gray-89;
+				text-transform: uppercase;
+				background: none;
+				transition: 0.3s ease;
+
+				@include hover {
+					background: none;
+					color: $black-0e;
+				}
+
+				&.active {
+					color: $black-0e;
+					text-decoration: underline;
+					text-underline-offset: 6px;
+					text-decoration-thickness: 2px;
+					text-decoration-color: $orange;
+				}
+			}
 		}
 	}
 

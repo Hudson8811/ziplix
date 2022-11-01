@@ -6,6 +6,17 @@ $(document).ready(function() {
 	var scroll = $(window).scrollTop();
 	var isScroll = false;
 
+	$('.header__nav').each(function (index, elem) {
+		var langLink = $(this).find('.header__lang li a');
+
+		langLink.on('click', function (e) {
+			e.preventDefault();
+
+			langLink.removeClass('active');
+			$(this).addClass('active');
+		});
+	});
+
 	$(window).on('scroll', function () {
 		if (window.matchMedia('(min-width: 1280px)').matches) {
 			scroll = $(window).scrollTop();
